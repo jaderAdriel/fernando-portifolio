@@ -378,10 +378,7 @@ section {
     align-items: end;
     .content {
         height: max-content;
-<<<<<<< HEAD
-=======
         
->>>>>>> bcc7bc46ec5ee29473f3fed608d8eddb4ee16fc8
     }
 }
 
@@ -405,12 +402,8 @@ section {
         flex-wrap: wrap;
         gap: 3em;
         .servico {
-<<<<<<< HEAD
-            width: min(25em, 100%);
-=======
             flex: 1;
             min-width: 20em;
->>>>>>> bcc7bc46ec5ee29473f3fed608d8eddb4ee16fc8
             padding: 2em;
             box-shadow: rgb(0, 0, 255, 0.25) 0px 1px 4px;
             border-radius: 5px;
