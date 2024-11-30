@@ -356,7 +356,8 @@ section {
 
     > section:first-of-type  {
         background-color: rgb(5, 5, 5);
-        padding: var(--padding-l);
+        padding: var(--padding-x);
+        padding-bottom: 0;
         p {
             color: #FFF;
         }
@@ -377,11 +378,7 @@ section {
     justify-content: center;
     align-items: end;
     .content {
-        height: max-content;
-<<<<<<< HEAD
-=======
-        
->>>>>>> bcc7bc46ec5ee29473f3fed608d8eddb4ee16fc8
+        height: max-content;        
     }
 }
 
@@ -405,12 +402,8 @@ section {
         flex-wrap: wrap;
         gap: 3em;
         .servico {
-<<<<<<< HEAD
-            width: min(25em, 100%);
-=======
             flex: 1;
             min-width: 20em;
->>>>>>> bcc7bc46ec5ee29473f3fed608d8eddb4ee16fc8
             padding: 2em;
             box-shadow: rgb(0, 0, 255, 0.25) 0px 1px 4px;
             border-radius: 5px;
@@ -467,6 +460,9 @@ section {
     color: #FFF;
 }
 
+.content-title {
+    font-size: 2em;
+}
 
 
 h2.header-marketing {
@@ -490,6 +486,27 @@ h2.header-marketing {
     }
 }
 
+.page-header {
+    .section-aside-banner {
+        width: fit-content;
+        height: auto;
+        position: relative;
+        background-color: none;
+    }
+
+    .section-aside-banner::after {
+        content: ''; /* Adiciona um elemento vazio para criar o gradiente */
+        position: absolute; /* Posiciona sobre a imagem */
+        top: 0;
+        left: 0;
+        width: 100%; /* Gradiente ocupa metade da imagem */
+        height: 100%; /* Altura total da imagem */
+        background: linear-gradient(0, rgba(0,0,0,1) 0%, rgba(0,0,255,0.7) 30%, rgba(0,0,255,0.21802325581395354) 100%); /* Gradiente para o fundo */
+        pointer-events: none; /* Permite interação com a imagem */
+        mix-blend-mode: multiply; 
+    }
+}
+
 #sobre-mim {
     padding-right: 0;
     padding-bottom: 0;
@@ -505,6 +522,9 @@ h2.header-marketing {
         color: #FFF;
     }
 
+    p {
+        font-size: 1em;
+    }
     
 
     img {
@@ -538,7 +558,8 @@ h2.header-marketing {
             display: none;
         }
         .content {
-            padding-right: 5rem;
+            /* padding-right: 5rem; */
+            background-color: #00000060;
         }
     }
 }
@@ -554,34 +575,39 @@ h2.header-marketing {
     .page-header {
         flex-direction: column-reverse;
         justify-content: center;
-        align-items: center;
         padding: 0;
     }
 
-    section {
+    .section {
         padding: 1em;
         .content {
             padding: 1em;
         }
-    }   
+    }
     .page-header {
-        .content {
-            zoom: 1;
-        }
+        padding: 1.4em;
+        padding: 1em;
     }
 
-
+    .main-content {
+        > section:first-of-type  {
+            padding: 1em;
+            .content {
+                padding: 0;
+            }
+        }
+    }
     .page-header> * {
         flex-basis: 1;
     }
-    .page.header .section-aside-banner,  .content {
-        align-items: center;
-        justify-content: center;
-    }
+        .page.header .section-aside-banner,  .content {
+            align-items: center;
+            justify-content: center;
+        }
     .content-header {
         
     }
-    .content-header > * {
+    .page-header .content-header > * {
         text-align: center;
     }
 
