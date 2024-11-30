@@ -20,7 +20,8 @@
     --padding-m: 1em;
     --padding-l: 2em;
     --padding-x: 5.5em;
-    --c-primary:  blue;
+    --c-primary:  #A7FD2A;
+    --c-secundary:  #0000FF;
 }
 
 :root {
@@ -72,8 +73,6 @@ section {
     justify-content: space-between;
     gap: var(--padding-s);
 }
-
-
 
 .logo-wrap{
     height: 100%;
@@ -286,7 +285,7 @@ section {
 
 
 .primary-button {
-    background-color: var(--c-primary);
+    background-color: var(--c-secundary);
     padding: var(--padding-s) var(--padding-m) var(--padding-s) var(--padding-m);
     border: none;
     color: #FFF;
@@ -344,8 +343,8 @@ section {
     min-height: 100vh;
 
     > section:first-of-type  {
-        background-color: black;
-
+        background-color: rgb(5, 5, 5);
+        padding: var(--padding-l);
         * {
             color: #FFF;
         }
@@ -361,9 +360,10 @@ section {
 }
 
 .content {
-    flex-basis: 50%;
+    flex-basis: 85%;
     display: flex;
     flex-direction: column;
+    padding: auto;
     gap: var(--padding-m);
 }
 
@@ -392,8 +392,13 @@ section {
 }
 
 .content-title.page-title  {
-    font-size: 3.5em;
+    font-size: 2.2em;
     line-height: 1.1;
+}
+
+.content-title.page-title.marketing {
+    font-size: 2.9em;
+    color: var(--c-primary);
 }
 
 .content-subtitle {
