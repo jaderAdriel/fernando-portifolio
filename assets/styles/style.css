@@ -378,7 +378,11 @@ section {
     justify-content: center;
     align-items: end;
     .content {
-        height: max-content;        
+        height: max-content;
+<<<<<<< HEAD
+=======
+        
+>>>>>>> bcc7bc46ec5ee29473f3fed608d8eddb4ee16fc8
     }
 }
 
