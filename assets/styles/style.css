@@ -339,7 +339,7 @@ section {
 /*Fim da seção do topo 'Header' */
 
 .footer-p {
-    text-align: justify;
+    text-align: center;
 }
 
 .content-body {
@@ -379,10 +379,6 @@ section {
     align-items: end;
     .content {
         height: max-content;
-<<<<<<< HEAD
-=======
-        
->>>>>>> bcc7bc46ec5ee29473f3fed608d8eddb4ee16fc8
     }
 }
 
@@ -597,16 +593,20 @@ h2.header-marketing {
         > section:first-of-type  {
             padding: 1em;
             .content {
-                padding: 0;
+                padding: 1em 0;
             }
         }
     }
     .page-header> * {
         flex-basis: 1;
     }
-        .page.header .section-aside-banner,  .content {
+        .page.header .section-aside-banner, .content {
             align-items: center;
             justify-content: center;
+        }
+
+        .section .content {
+            align-items: baseline;
         }
     .content-header {
         
@@ -615,8 +615,8 @@ h2.header-marketing {
         text-align: center;
     }
 
-    .page.header .content-title {
-        font-size: 2em;
+    .content-title {
+        font-size: 1.5em;
     }
     .content-title.page-title  {
         font-size: 2.5em;
