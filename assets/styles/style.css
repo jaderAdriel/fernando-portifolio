@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     padding: 0;
@@ -9,9 +9,21 @@
     list-style: none;
     outline: none;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Parkinsans", sans-serif;
 }
 
+.aspas {
+    font-size: 2em;
+    color: gray;
+    transform: translateY(0.3em);
+    /* padding: 0 0.1em; */
+    display: inline-block; /* Garante alinhamento inline */
+    line-height: 1; /* Reduz a altura adicional */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
 
 
 :root {
@@ -361,9 +373,11 @@ section {
 
 
 .page-header {
+    justify-content: center;
+    align-items: end;
     .content {
         height: max-content;
-        zoom: 1.5;
+        
     }
 }
 
@@ -375,7 +389,8 @@ section {
     gap: var(--padding-m);
 }
 
-#servicos {
+.section {
+    padding-top: 0;
     .content {
         flex-basis: 100%;
     }
@@ -386,7 +401,8 @@ section {
         flex-wrap: wrap;
         gap: 3em;
         .servico {
-            width: min(30em, 100%);
+            flex: 1;
+            min-width: 20em;
             padding: 2em;
             box-shadow: rgb(0, 0, 255, 0.25) 0px 1px 4px;
             border-radius: 5px;
@@ -397,7 +413,7 @@ section {
                 align-items: center;
                 gap: 1em;
                 h3 {
-                    font-size: 1.5em;
+                    font-size: 1.2em;
                 }
             }
             img {
@@ -455,31 +471,91 @@ h2.header-marketing {
     font-weight: 300;
     color: #FFF;
 }
- 
+
+
+.nome-servico {
+    font-size: 1.5em;
+}
+@media (min-width: 1100px) {
+    .page-header .content{
+        padding-right: 0.5em;
+    }
+}
+
+#sobre-mim {
+    padding-right: 0;
+    padding-bottom: 0;
+    min-height: 25em;
+    position: relative;
+    background-color: var(--c-secundary);/* Gradiente de fundo */
+    background-image: url('../images/half.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative; /* Necessário para o posicionamento relativo do pseudo-elemento */
+    * {
+        color: #FFF;
+    }
+
+    
+
+    img {
+        width: auto; /* Ajusta o tamanho conforme a imagem */
+        height: auto;
+        display: block; /* Garante boa exibição */
+        position: relative; /* Permite aplicar o gradiente acima da imagem */
+    }
+
+    .section-aside-banner {
+        width: fit-content;
+        height: auto;
+        position: relative;
+        background-color: none;
+    }
+
+    .section-aside-banner::after {
+        content: ''; /* Adiciona um elemento vazio para criar o gradiente */
+        position: absolute; /* Posiciona sobre a imagem */
+        top: 0;
+        left: 0;
+        width: 100%; /* Gradiente ocupa metade da imagem */
+        height: 100%; /* Altura total da imagem */
+        background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(0,0,255,0.7) 50%, rgba(0,0,255,0.21802325581395354) 100%); /* Gradiente para o fundo */
+        pointer-events: none; /* Permite interação com a imagem */
+        mix-blend-mode: multiply; 
+    }
+
+    @media (max-width: 640px) {
+        .section-aside-banner {
+            display: none;
+        }
+        .content {
+            padding-right: 5rem;
+        }
+    }
+}
+
+
 @media (max-width: 1100px)
 {   
     .main-header {
         padding: var(--padding-m);
-        padding-top: var(--padding-s);
         gap: 0;
     }
     
-    .page-header, .section {
+    .page-header {
         flex-direction: column-reverse;
         justify-content: center;
+        align-items: center;
         padding: 0;
-        .content {
-            /* padding: var(--padding-l); */
-            padding-top: 0;
-        }
     }
 
     section {
-    padding: var(--padding-x);
-    .content {
         padding: 1em;
-    }
-}   
+        .content {
+            padding: 1em;
+        }
+    }   
     .page-header {
         .content {
             zoom: 1;
@@ -490,7 +566,7 @@ h2.header-marketing {
     .page-header> * {
         flex-basis: 1;
     }
-    .section-aside-banner, .content {
+    .page.header .section-aside-banner,  .content {
         align-items: center;
         justify-content: center;
     }
@@ -499,6 +575,10 @@ h2.header-marketing {
     }
     .content-header > * {
         text-align: center;
+    }
+
+    .page.header .content-title {
+        font-size: 2em;
     }
     .content-title.page-title  {
         font-size: 2.5em;
