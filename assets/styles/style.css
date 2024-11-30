@@ -345,7 +345,7 @@ section {
     > section:first-of-type  {
         background-color: rgb(5, 5, 5);
         padding: var(--padding-l);
-        * {
+        p {
             color: #FFF;
         }
     }
@@ -359,12 +359,58 @@ section {
     justify-content: space-between;
 }
 
+
+
+.page-header {
+    .content {
+        height: max-content;
+    }
+}
+
 .content {
     flex-basis: 85%;
     display: flex;
     flex-direction: column;
     padding: auto;
     gap: var(--padding-m);
+}
+
+#servicos {
+    .content {
+        flex-basis: 100%;
+    }
+    .servicos-list {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3em;
+        .servico {
+            width: min(25em, 100%);
+            padding: 2em;
+            box-shadow: rgb(0, 0, 255, 0.25) 0px 1px 4px;
+            border-radius: 5px;
+            .servico-header {
+                margin-bottom: 1em;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1em;
+                h3 {
+                    font-size: 1.5em;
+                }
+            }
+            img {
+                width: auto;
+                height: 3em;
+            }
+            .description {
+                text-align: justify;
+                color: black;
+                font-size: 1em;
+            }
+        }
+    }
 }
 
 .section-aside-banner {
@@ -392,18 +438,22 @@ section {
 }
 
 .content-title.page-title  {
-    font-size: 2.2em;
-    line-height: 1.1;
+    font-size: 3.5em;
+    line-height: 1;
+    color: #FFF;
 }
 
-.content-title.page-title.marketing {
-    font-size: 2.9em;
+
+
+h2.header-marketing {
+    font-size: 2em;
     color: var(--c-primary);
 }
 
 .content-subtitle {
     font-size: 1.2em;
     font-weight: 300;
+    color: #FFF;
 }
  
 @media (max-width: 1100px)
@@ -419,14 +469,24 @@ section {
         justify-content: center;
         padding: 0;
         .content {
-            padding: var(--padding-l);
+            /* padding: var(--padding-l); */
             padding-top: 0;
         }
     }
 
-    .section {
-        padding: var(--padding-m);
+    section {
+    padding: var(--padding-x);
+    .content {
+        padding: 1em;
     }
+}   
+    .page-header {
+        .content {
+            zoom: 1;
+        }
+    }
+
+
     .page-header> * {
         flex-basis: 1;
     }
@@ -441,7 +501,7 @@ section {
         text-align: center;
     }
     .content-title.page-title  {
-        font-size: 2em;
+        font-size: 2.5em;
         line-height: 1.1;
     }
 }
