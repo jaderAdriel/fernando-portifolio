@@ -32,8 +32,11 @@ body::-webkit-scrollbar {
     --padding-m: 1em;
     --padding-l: 2em;
     --padding-x: 5.5em;
-    --c-primary:  #A7FD2A;
-    --c-secundary:  #0000FF;
+    --c-primary:  #fa3f38;
+    --c-secundary:  #031841;
+    --c-primary-rgb:  250, 63, 56;
+    --c-secundary-rgb:  3, 24, 65;
+    
 }
 
 :root {
@@ -501,7 +504,7 @@ h2.header-marketing {
         left: 0;
         width: 100%; /* Gradiente ocupa metade da imagem */
         height: 100%; /* Altura total da imagem */
-        background: linear-gradient(0, rgba(0,0,0,1) 0%, rgba(0,0,255,0.7) 30%, rgba(0,0,255,0.21802325581395354) 100%); /* Gradiente para o fundo */
+        background: linear-gradient(0, rgba(0,0,0,1) 0%, rgb(var(--c-secundary-rgb), 1) 30%, rgb(var(--c-secundary-rgb),  0.21) 100%); /* Gradiente para o fundo */
         pointer-events: none; /* Permite interação com a imagem */
         mix-blend-mode: multiply; 
     }
@@ -510,10 +513,12 @@ h2.header-marketing {
 #sobre-mim {
     padding-right: 0;
     padding-bottom: 0;
+    padding-top: 0 ;
     min-height: 25em;
+    height: fit-content;
     position: relative;
     background-color: var(--c-secundary);/* Gradiente de fundo */
-    background-image: url('../images/half.png');
+    background-image: url('../images/carao-cor.png');
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -528,8 +533,8 @@ h2.header-marketing {
     
 
     img {
-        width: auto; /* Ajusta o tamanho conforme a imagem */
-        height: auto;
+        width: 15em; /* Ajusta o tamanho conforme a imagem */
+        object-fit: cover;
         display: block; /* Garante boa exibição */
         position: relative; /* Permite aplicar o gradiente acima da imagem */
     }
@@ -548,9 +553,11 @@ h2.header-marketing {
         left: 0;
         width: 100%; /* Gradiente ocupa metade da imagem */
         height: 100%; /* Altura total da imagem */
-        background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(0,0,255,0.7) 50%, rgba(0,0,255,0.21802325581395354) 100%); /* Gradiente para o fundo */
+        background: linear-gradient(90deg, 
+            rgb(var(--c-secundary-rgb) , 1) 0%,  
+            rgb(var(--c-secundary-rgb), 0.8) 100%);
         pointer-events: none; /* Permite interação com a imagem */
-        mix-blend-mode: multiply; 
+         
     }
 
     @media (max-width: 640px) {
