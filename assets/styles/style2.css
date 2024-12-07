@@ -1,0 +1,296 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Quinn';
+    src: url('../fonts/Quinn.ttf') format('ttf'); /* Formato moderno */
+    font-weight: bold; /* Normal, bold, etc., dependendo do arquivo */
+    font-style: normal;  /* Normal, italic, etc., dependendo do arquivo */
+}
+
+:root {
+    font-size: 16px;
+    --spacing-xs: 0.5em;
+    --spacing-sm: 1em;
+    --spacing-md: 2em;
+    --spacing-lg: 4em;
+}
+
+:root {
+    /* Spacing Variables */
+    --spacing-xxs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+  
+    /* Color Variables */
+    --primary: #fa3f38;
+    --primary-dark: #8a1b17;
+    --secondary: #031841;
+    --secondary-dark: rgb(6, 43, 114);
+  
+    /* Color Variables (RGB Format) */
+    --primary-rgb: 250, 63, 56;
+    --primary-dark-rgb: 138, 27, 23;
+    --secondary-rgb: 3, 24, 65;
+    --secondary-dark-rgb: 6, 43, 114;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    box-sizing: border-box !important;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    font-family: "Parkinsans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+html, body {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.main-content {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+}
+
+.c-primary {
+    color: var(--primary);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.content-title {
+    font-size: clamp(1.5rem, 3vw, 3rem); /* Títulos responsivos */
+}
+
+#hero-section {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    padding: 0 0 0 clamp(var(--spacing-sm), 7%, var(--spacing-xl)); /* Espaçamento esquerdo adaptável */
+    background-color: var(--secondary);
+    min-height: 15em;
+    height: fit-content;
+    background-image: url('../images/carao-cor.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #fff;
+
+    .content {
+        max-width: 40em;
+        display: flex;
+        flex-direction: column;
+        padding: clamp(var(--spacing-md), 5%, var(--spacing-lg));
+        padding-left: 0;
+        gap: 3em;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .content-title {
+        font-size: clamp(1.8rem, 3vw, 3rem); /* Títulos responsivos */
+    }
+
+    .content-subtitle {
+        font-size: clamp(1.2rem, 1.5vw, 2em);
+        color: var(--primary);
+    }
+
+    .content-phase {
+        /* font-family: 'Quinn'; */
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+
+    .primary-button {
+        min-width: 15em;
+    }
+}
+
+
+#servicos-section {
+    padding-top: 0;
+    padding: clamp(var(--spacing-sm), 7%, var(--spacing-xl)); /* Espaçamento esquerdo adaptável */
+
+    .content {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        .content-title {
+            font-size: clamp(1.8rem, 3vw, 2.5rem); /* Títulos responsivos */
+        }
+    }
+
+    header {
+        color: var(--secondary);
+    }
+
+    .servicos-list {
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3em;
+
+        .servico {
+            width: clamp(15em, 100%, 28em);
+            padding: 2em;
+            box-shadow: rgb(var(--secondary-dark-rgb), 0.25) 0px 1px 4px;
+            border-radius: 5px;
+
+            .servico-header {
+                margin-bottom: 1em;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1em;
+
+                h3 {
+                    font-size: 1.2em;
+                }
+            }
+
+            img {
+                width: auto;
+                height: 3em;
+            }
+
+            .description {
+                text-align: justify;
+                color: black;
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+
+#sobre-mim {
+    min-height: 25em;
+    height: fit-content;
+    display: flex;
+    gap: clamp(var(--spacing-sm), 7%, var(--spacing-md));
+    align-items: end;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: var(--secondary);
+    color: #fff;
+    position: relative; /* Necessário para o posicionamento relativo do pseudo-elemento */
+    background-image: url('../images/IMG_2323-Photoroomv2.png');
+    background-position: 80%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    header {
+        color: #fa3f38;
+    }
+
+    .content {
+        padding: clamp(var(--spacing-sm), 7%, var(--spacing-xl));
+        max-width: 40em;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        font-size: 1em;
+        .content-title {
+            font-size: clamp(1.8rem, 3vw, 2.5rem); /* Títulos responsivos */
+        }
+    }   
+
+
+    img {
+        height: clamp(15em, 40vw, 40em);
+        object-fit: cover;
+        display: block; 
+        position: relative;
+    }
+
+    .section-image{
+        margin-top: 1em;
+        display: none;
+        width: fit-content;
+        height: auto;
+        position: relative;
+        -webkit-mask-image: linear-gradient(to top, transparent 3%, rgba(var(--secondary-rgb, 0.1)) 100%);
+    }
+
+    
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    
+
+    .sublist {
+        padding-left: 1em;
+        li {
+            padding: 0.2em;
+            list-style: disc;
+            list-style-position: inside;
+        }
+    }
+
+    @media (max-width: 850px) {
+        background-image: none;
+        justify-content: center;
+        gap: 0;
+        .section-image {
+            display: block;
+        }
+        .content {
+            padding-top: 0;
+        }
+    }
+}
+
+.primary-button {
+    background-color: var(--primary);    
+    -webkit-box-shadow: 0px 0px 22px 11px rgba(var(--primary-rgb),0.8);
+    -moz-box-shadow: 0px 0px 22px 11px rgba(var(--primary-rgb),0.8);
+    box-shadow: 0px 0px 22px 11px rgba(var(--primary-rgb),0.8);
+    padding: var(--spacing-xs) var(--spacing-md) var(--spacing-xs) var(--spacing-md);
+    border: none;
+    color: #FFF;
+    font-weight: 700;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--primary-dark);
+        -webkit-box-shadow: 0px 0px 22px 11px rgba(var(--primary-dark-rgb),0.8);
+        -moz-box-shadow: 0px 0px 22px 11px rgba(var(--primary-dark-rgb),0.8);
+        box-shadow: 0px 0px 22px 11px rgba(var(--primary-dark-rgb),0.8);
+    }
+}
