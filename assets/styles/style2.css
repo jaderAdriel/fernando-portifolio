@@ -321,7 +321,7 @@ body {
 }
 
 .primary-button:hover {
-    background-color: var(--terciary);
+    background-color: var(--primary);
     zoom: 1.02;
 }
 
