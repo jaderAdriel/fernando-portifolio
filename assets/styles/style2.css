@@ -173,12 +173,11 @@ body {
 
     .servicos-list {
         flex-basis: 100%;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 3em;
 
         .servico {
-            width: clamp(15em, 100%, 28em);
             padding: 2em;
             box-shadow: rgb(var(--secondary-dark-rgb), 0.25) 0px 1px 4px;
             border-radius: 5px;
@@ -302,6 +301,31 @@ body {
     }
 }
 
+
+
+
+/* Footer Styling */
+.footer {
+    background-color: rgb(var(--secondary-dark-rgb));
+    color: #fff;
+    text-align: center;
+    padding: clamp(var(--spacing-sm), 7%, var(--spacing-md));
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    font-size: 0.9em;
+
+    .footer-text {
+        font-weight: bold;
+    }
+
+    .footer-cnpj {
+        font-size: 0.87em;
+        opacity: 0.8;
+    }
+}
+  
 /* End about me */
 
  /* button */
